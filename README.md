@@ -18,3 +18,5 @@
 * [Using libft in projects](#Using-libft-in-projects)
 
 ## What is ft_printf
+### [The task](https://github.com/scainet7/ft_printf/blob/master/subject/subject_ft_printf_en.pdf)
+Ft_printf - this is a project written in C language, it is a prototype of the "printf" function, which serves to display information.
