@@ -3,7 +3,7 @@
 </h1>
 
 <h1>
-	<b><img src=img/succes.jpeg width=150px></b>
+	<b><img src=img/success.PNG width=150px></b>
 </h1>
 
 ## Language
