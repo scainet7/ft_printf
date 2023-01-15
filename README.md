@@ -12,10 +12,6 @@
 
 ## Content
 * [What is ft_printf](#What-is-ft_printf)
-* [What is it](#What-is-it) 
-* [Function description](#Function-description)
-* [Instructions](#Instructions)
-* [Using libft in projects](#Using-libft-in-projects)
 
 ## What is ft_printf
 ### [The task](https://github.com/scainet7/ft_printf/blob/master/subject/subject_ft_printf_en.pdf)
