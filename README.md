@@ -77,14 +77,14 @@ gcc libftprintf.a -o test test.c
 
 ## Result
 
-Testing main!
+Testing main:
 <h1>
 	<b><img src=img/main.png width=450px></b>
 </h1>
 
 
 <h1>
-  <b><img src=img/test.gif" width="700px"/><b>
+  <b><img src=img/test.gif width="700px"/><b>
 </h1>
 
 ## Содержание
@@ -154,4 +154,12 @@ gcc libftprintf.a -o test test.c
 
 ## Результат
 
+Тестовый main:
+<h1>
+	<b><img src=img/main.png width=450px></b>
+</h1>
 
+
+<h1>
+  <b><img src=img/test.gif width="700px"/><b>
+</h1>
