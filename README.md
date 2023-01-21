@@ -69,13 +69,23 @@ cd ft_printf
 make
 ```
 ```sh
-gcc libftprintf.a -o test main.c
+gcc libftprintf.a -o test test.c
 ```
 ```sh
 ./test
 ```
 
 ## Result
+
+Testing main!
+<h1>
+	<b><img src=img/main.png width=450px></b>
+</h1>
+
+
+<h1>
+  <b><img src=img/test.gif" width="700px"/><b>
+</h1>
 
 ## Содержание
 * [Что такое ft_printf](#Что-такое-ft_printf)
@@ -136,10 +146,12 @@ cd ft_printf
 make
 ```
 ```sh
-gcc libftprintf.a -o test main.c
+gcc libftprintf.a -o test test.c
 ```
 ```sh
 ./test
 ```
 
 ## Результат
+
+
