@@ -6,61 +6,47 @@
 #    By: snino <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 17:57:14 by snino             #+#    #+#              #
-#    Updated: 2022/12/05 20:57:41 by snino            ###   ########.fr        #
+#    Updated: 2021/11/07 18:08:37 by snino            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME				:=	libftprintf.a
+NAME		= libftprintf.a
 
-CC					:=	gcc
+LIBFT_DIR	= libft
 
-CFLAGS				:=	-Wall -Wextra -Werror
+LIBFT		= $(LIBFT_DIR)/libft.a
 
-LIBFT_A				:=	libft.a
+SRCS		= ft_printf.c		ft_sort.c		ft_print_c.c	ft_print_s.c\
+			  ft_print_p.c		ft_trans_add.c	ft_print_id.c	ft_print_u.c\
+			  ft_trans_dec.c	ft_print_xx.c	ft_trans_hex.c	ft_print_proc.c
 
-LIBF_DIR			:=	libft/
+HEADER		= ft_printf.h
 
-LIBFT				:=	$(addprefix $(LIBF_DIR), $(LIBFT_A))
+OBJ			= $(patsubst %.c, %.o, $(SRCS))
 
-SRCS				:=	ft_sort.c\
-						ft_printf.c\
-						ft_print_u.c\
-						ft_print_c.c\
-						ft_print_s.c\
-						ft_print_p.c\
-						ft_print_id.c\
-						ft_print_xx.c\
-						ft_trans_add.c\
-						ft_trans_dec.c\
-						ft_trans_hex.c\
-						ft_print_proc.c\
+CC			= gcc
 
-HEADER				:=	ft_printf.h
+CFLAGS		= -Wall -Wextra -Werror
 
-OBJ_DIR				:=	obj
+.PHONY:		all clean fclean re
 
-OBJ					:=	$(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(SRCS)))
+all		:	$(NAME)
 
-.PHONY				:	all clean fclean re
+$(NAME)	:	$(OBJ)
+		@$(MAKE) -C $(LIBFT_DIR) all
+		@$(MAKE) bonus -C $(LIBFT_DIR) 
+		@cp $(LIBFT) $(NAME)
+		@ar rcs $(NAME) $(OBJ) $?
 
-all					:	$(NAME)
+%.o		: %.c $(HEADER)
+		$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME)				:	$(HEADER) $(OBJ)
-						@make -C $(LIBF_DIR)
-						ar rcs $(NAME) $?
-						#$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME) $?
+clean	:
+		@$(MAKE) -C $(LIBFT_DIR) clean
+		@rm -f $(OBJ)
 
-$(OBJ_DIR)/%.o		:  	%.c $(HEADER)
-						@mkdir -p $(OBJ_DIR)
-	 					$(CC) $(CFLAGS) -c $< -o $@
+fclean	: clean
+		@$(MAKE) -C $(LIBFT_DIR) fclean
+		@rm -f $(NAME) 
 
-clean				:
-						@rm -rf $(OBJ)
-						@make -C $(LIBF_DIR) clean
-
-fclean				: 	clean
-						@$(RM) $(NAME)
-						@rm -rf obj
-						@make -C $(LIBF_DIR) fclean
-
-re					: fclean all
+re		: fclean all

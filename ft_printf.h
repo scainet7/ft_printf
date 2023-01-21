@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include "libft/libft.h"
 
-int		ft_printf(const char *s, ...);
+int		ft_printf(const char *format, ...);
 int		ft_sort(int c, va_list args);
 int		ft_print_c(va_list args);
 int		ft_print_s(va_list args);
