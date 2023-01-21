@@ -68,6 +68,12 @@ cd ft_printf
 ```sh
 make
 ```
+```sh
+gcc libftprintf.a -o test main.c
+```
+```sh
+./test
+```
 
 ## Result
 
@@ -128,6 +134,12 @@ cd ft_printf
 ```
 ```sh
 make
+```
+```sh
+gcc libftprintf.a -o test main.c
+```
+```sh
+./test
 ```
 
 ## Результат
